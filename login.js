@@ -1,11 +1,12 @@
-function login() {
-    const user = document.getElementById("username").value;
-    const pass = document.getElementById("password").value;
+document.getElementById("loginBtn").onclick = function () {
+    const user = username.value;
+    const pass = password.value;
 
-    if (user === "admin" && pass === "1234") {
+    if (user === "admin" && pass === "admin") {
+        localStorage.setItem("connected", "true");
         window.location.href = "dashboard.html";
     } else {
-        document.getElementById("error").innerText =
-            "Nom d'utilisateur ou mot de passe incorrect";
+        error.style.display = "block";
     }
-}
+};
+
