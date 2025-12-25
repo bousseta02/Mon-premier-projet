@@ -2,32 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Login - Gestion Hospitalière</title>
-    <!-- Lien vers le CSS unique -->
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="src/css/login.css">
 </head>
 <body>
 
-<!-- LOGIN -->
-<div id="login">
+<div class="login-box">
     <h2>Connexion</h2>
-
-    <!-- Instructions d'identifiants -->
-    <p><strong>Identifiants :</strong></p>
-    <p>Utilisateur : <b>admin</b></p>
-    <p>Mot de passe : <b>1234</b></p>
-
     <input type="text" id="username" placeholder="Utilisateur">
-    <br><br>
     <input type="password" id="password" placeholder="Mot de passe">
-    <br><br>
-    <button onclick="login()">Se connecter</button>
-
-    <!-- Message d'erreur -->
-    <p id="error"></p>
+    <button id="loginBtn">Se connecter</button>
+    <p class="error" id="error">Identifiants incorrects</p>
 </div>
 
-<!-- Lien vers le JS unique -->
-<script src="login.js"></script>
+<script src="src/js/login.js"></script>
 </body>
 </html>
+
