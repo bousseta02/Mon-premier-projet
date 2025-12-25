@@ -2,21 +2,27 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard - Gestion Hospitalière</title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="src/css/dashboard.css">
+    <link rel="stylesheet" href="src/css/tables.css">
 </head>
 <body>
 
-<h2>Dashboard - Gestion Hospitalière</h2>
+<div class="sidebar">
+    <h2>MyManager</h2>
+    <a href="#" data-page="patients">Patients</a>
+    <a href="#" data-page="medecins">Médecins</a>
+    <a href="#" data-page="rendezvous">Rendez-vous</a>
+    <a href="#" data-page="prescriptions">Prescriptions</a>
+    <a href="#" data-page="services">Services</a>
+</div>
 
-<ul>
-    <li><a href="#">Patients</a></li>
-    <li><a href="#">Médecins</a></li>
-    <li><a href="#">Rendez-vous</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Factures</a></li>
-</ul>
+<div class="content">
+    <h1 id="page-title">Dashboard</h1>
+    <div id="page-content"></div>
+</div>
 
-<p>Bienvenue dans le système de gestion hospitalière.</p>
-
+<script src="src/js/dashboard.js"></script>
+<script src="src/js/crud.js"></script>
 </body>
 </html>
