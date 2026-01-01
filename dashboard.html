@@ -1,28 +1,51 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="src/css/dashboard.css">
-    <link rel="stylesheet" href="src/css/tables.css">
+    <title>Dashboard - MyManager</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="sidebar">
-    <h2>MyManager</h2>
-    <a href="#" data-page="patients">Patients</a>
-    <a href="#" data-page="medecins">Médecins</a>
-    <a href="#" data-page="rendezvous">Rendez-vous</a>
-    <a href="#" data-page="prescriptions">Prescriptions</a>
-    <a href="#" data-page="services">Services</a>
+<div class="container">
+    <aside class="sidebar">
+        <h2>MyManager</h2>
+        <ul>
+            <li onclick="loadEntity('patients')">Patients</li>
+            <li onclick="loadEntity('medecins')">Médecins</li>
+            <li onclick="loadEntity('rendezvous')">Rendez-vous</li>
+            <li onclick="loadEntity('services')">Services</li>
+            <li onclick="logout()">Déconnexion</li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        <h1 id="page-title">Dashboard</h1>
+        <div class="card">
+            <form id="crud-form">
+                <input type="text" id="field1" placeholder="Champ 1" required>
+                <input type="text" id="field2" placeholder="Champ 2" required>
+                <button type="submit">Ajouter</button>
+            </form>
+        </div>
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Champ 1</th>
+                        <th>Champ 2</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+    </main>
 </div>
 
-<div class="content">
-    <h1 id="page-title">Dashboard</h1>
-    <div id="page-content"></div>
-</div>
-
-<script src="src/js/dashboard.js"></script>
-<script src="src/js/crud.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
 </body>
 </html>
+
